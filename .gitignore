@@ -1,2 +1,6 @@
-myvenv/*
+myvenv/
 *.pyc
+/.vscode
+*~
+/static
+.DS_store
