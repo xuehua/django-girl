@@ -3,5 +3,4 @@ myvenv/
 /.vscode
 *~
 /static
-db.sqlite3
 .DS_store
