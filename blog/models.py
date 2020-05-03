@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):
@@ -17,6 +18,10 @@ class Post(models.Model):
     def approved_comments(self):
         #return self.comments.filter(approved_comment=True)
         return self.comments.filter(approved_comment=True)
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
+
 
     def __str__(self):
         return self.title
