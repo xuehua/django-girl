@@ -82,7 +82,7 @@ def post_share(request, pk):
     sent = False
     if request.method == "POST":
         form = EmailPostForm(request.POST)
-        if form.isvalid():
+        if form.is_valid():
             cd = form.cleaned_data
             post_url = request.build_absolute_uri(post.get_absolute_url())
             subject = f"{cd['name']} recommends you read '{post.title}'"
